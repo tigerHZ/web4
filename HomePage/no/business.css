@@ -1,0 +1,106 @@
+/* 三个 block的公共样式 */
+
+.business-block {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 50px;
+    height: 400px;
+    text-align: center;
+}
+
+
+/* 三个block的分别样式 */
+
+.block1 {
+    background: url(../img/business/eaves.png) right top no-repeat, url(../img/business/background1.jpg);
+}
+
+.block2 {
+    background: url(../img/business/eaves.png) right top no-repeat, url(../img/business/background2.jpg);
+}
+
+.block3 {
+    background: url(../img/business/eaves.png) right top no-repeat, url(../img/business/background3.jpg);
+}
+
+
+/* block里面的文字预设样式*/
+
+.text {
+    height: 250px;
+    width: 800px;
+    border: 3px dashed black;
+}
+
+
+/* block里面的三行文字 */
+
+.business-name {
+    font-size: 80px;
+}
+
+.business-aim {
+    font-size: 60px;
+}
+
+.business-detail {
+    font-size: 14px;
+}
+
+
+/* h3-text的定位 */
+
+.bottom-detail {
+    position: absolute;
+    bottom: 13px;
+    padding: 0 2%;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+@media screen and (max-width:800px) {
+    .business-block {
+        margin: 25px 5px;
+        height: 160px;
+    }
+    .block1 {
+        background-size: 50%;
+    }
+    .block2 {
+        background-size: 50%;
+    }
+    .block3 {
+        background-size: 50%;
+    }
+    .text {
+        height: 55px;
+        width: 250px;
+        border: 2px dashed black;
+        margin-top: -25px;
+    }
+    /* block里面的三行文字 */
+    .business-name {
+        font-size: 20px;
+    }
+    .business-aim {
+        font-size: 15px;
+    }
+    .business-detail {
+        font-size: 1px;
+    }
+    /* h3-text的定位 */
+    .bottom-detail {
+        position: absolute;
+        margin-bottom: -4px;
+    }
+    p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+}

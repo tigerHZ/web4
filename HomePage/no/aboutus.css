@@ -1,0 +1,466 @@
+﻿/*banner样式*/
+
+.aboutus-mainbanner {
+    width: 100%;
+}
+
+
+/*--------------------- whoweare ------------------------ */
+
+
+/*who we are三个单词图片  */
+
+.whoweare {
+    float: left;
+    width: 250px;
+    height: 150px;
+    margin-left: calc(50% - 300px);
+}
+
+
+/* whoweare右边的文字 */
+
+.whoweare-text {
+    float: right;
+    width: 250px;
+    height: 150px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: calc(50% - 300px);
+}
+
+
+/*--------------------- whoweare end------------------------ */
+
+
+/*--------------------- 拼接图 ------------------------ */
+
+.splice1 {
+    width: 20.83333333333333%;
+    float: left;
+    margin-bottom: 50px;
+}
+
+.splice2 {
+    width: 37.5%;
+    float: left;
+}
+
+.splice1 img {
+    width: 100%;
+}
+
+.splice2 img {
+    width: 100%;
+}
+
+
+/* 设置固定的宽，放置两张图片的时候实现竖排展示 */
+
+.img-display-block {
+    display: block;
+}
+
+.whoweare-position {
+    width: 1200px;
+    margin: 50px auto;
+}
+
+
+/*--------------------- 拼接图 end------------------------ */
+
+
+/*--------------------- 时间轴 ------------------------ */
+
+.timeline {
+    position: relative;
+    width: 50%;
+    min-height: 400px;
+}
+
+.timeline-right {
+    float: right;
+    border-left: 2px solid black;
+}
+
+.timeline-left {
+    float: left;
+    text-align: right;
+    margin-bottom: 50px;
+    border-right: 2px solid black;
+}
+
+
+/* 时间轴的文字 */
+
+.pre-text {
+    font-size: 16px;
+    max-width: 500px;
+}
+
+.pretext-right {
+    margin-left: 20px;
+}
+
+.pretext-left {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 66px;
+}
+
+
+/* 时间轴的小的时间 */
+
+.pre-time {
+    font-size: 16px;
+    margin: 166px auto 50px auto;
+}
+
+.pretime-right {
+    margin-left: 25px;
+}
+
+.pretime-left {
+    margin-right: 25px;
+}
+
+
+/* 使用伪类实现大的时间框 */
+
+.main-time::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    left: -25px;
+    top: -35px;
+    z-index: -1;
+}
+
+.main-time::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    left: -15px;
+    top: -25px;
+    background-color: #000;
+    z-index: -2;
+}
+
+
+/* 大的时间框里面的时间文字显示 */
+
+.main-time {
+    position: relative;
+    top: 24px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    z-index: 99;
+}
+
+.maintime-right {
+    float: left;
+    left: -24px;
+}
+
+.maintime-left {
+    float: right;
+    right: -24px;
+}
+
+
+/* 时间轴结束的黑色圆形 */
+
+.pretext-left::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    right: -17.5px;
+    bottom: 0px;
+    background-color: #000;
+}
+
+
+/* pre-time的两个同心圆 */
+
+.pre-time::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    top: 171px;
+}
+
+.pre-time::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    top: 174px;
+    background-color: #000;
+}
+
+.pretime-right::before {
+    left: -8.6px;
+}
+
+.pretime-right::after {
+    left: -5.8px;
+}
+
+.pretime-left::before {
+    right: -8px;
+}
+
+.pretime-left::after {
+    right: -5px;
+}
+
+
+/*--------------------- 时间轴 end------------------------ */
+
+
+/*--------------------- 联系方式 ------------------------ */
+
+
+/* 联系方式的样式预设 */
+
+.contact {
+    height: 400px;
+    padding-left: 30%;
+    background-color: #dcdcdc;
+    font-size: 18px;
+    line-height: 70px;
+}
+
+.contact-email {
+    padding-top: 110px;
+}
+
+
+/* email图标 */
+
+.contact-icon::before {
+    content: '';
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-right: 40px;
+}
+
+.contact-email::before {
+    background: url(../img/aboutus/icon_email.png) 2px 12px no-repeat;
+    margin-bottom: -18px;
+}
+
+
+/* add图标 */
+
+.contact-add::before {
+    background: url(../img/aboutus/icon_homepage.png) 2px 12px no-repeat;
+    margin-bottom: -12px;
+}
+
+
+/* num图标 */
+
+.contact-num::before {
+    background: url(../img/aboutus/icon_mobilephone.png) 4px 12px no-repeat;
+    margin-bottom: -12px;
+}
+
+
+/*--------------------- 联系方式 end------------------------ */
+
+
+/* 下面的巨幅文字 */
+
+.main-bottom-text {
+    height: 450px;
+    text-align: center;
+    line-height: 450px;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+
+/*--------------------- 下面是响应式css的设置 ------------------------ */
+
+@media screen and (max-width:800px) {
+    /* whoweare */
+    .float-centerbox {
+        position: relative;
+        width: 100px;
+        left: 50%;
+    }
+    .whoweare {
+        float: left;
+        position: relative;
+        width: 200px;
+        height: 95px;
+        left: -100px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    /* whoweare右边的文字 */
+    .whoweare-text {
+        float: left;
+        position: relative;
+        width: 300px;
+        height: 100px;
+        font-size: 1px;
+        font-weight: 500;
+        left: -150px;
+        margin: 20px 0px 0px 0px;
+    }
+    .whoweare-position {
+        width: 320px;
+        margin: 50px auto;
+    }
+    /*--------------------- 时间轴部分 ------------------------ */
+    .timeline {
+        min-height: 220px;
+    }
+    .timeline-right {
+        border-left: 1px solid black;
+    }
+    .timeline-left {
+        border-right: 1px solid black;
+    }
+    /* 时间轴的文字 */
+    .pre-text {
+        font-size: 13px;
+    }
+    .pretext-right {
+        margin-left: 5px;
+    }
+    .pretext-left {
+        margin-right: 5px;
+        margin-bottom: 30px;
+    }
+    /* 时间轴的小的时间 */
+    .pre-time {
+        font-size: 16px;
+        margin: 50px auto 25px auto;
+    }
+    .pretime-right {
+        margin-left: 15px;
+    }
+    .pretime-left {
+        margin-right: 15px;
+    }
+    /* 使用伪类实现大的时间框 */
+    .main-time::before {
+        content: "";
+        width: 50px;
+        height: 50px;
+        left: -8px;
+        top: -16px;
+        z-index: -1;
+    }
+    .main-time::after {
+        width: 40px;
+        height: 40px;
+        left: -3px;
+        top: -11px;
+        z-index: -2;
+    }
+    /* 大的时间框里面的时间文字显示 */
+    .main-time {
+        position: relative;
+        top: 0px;
+        color: #fff;
+        font-size: 15px;
+        text-align: center;
+        z-index: 99;
+    }
+    .maintime-right {
+        float: left;
+        left: -17px;
+    }
+    .maintime-left {
+        float: right;
+        right: -15px;
+    }
+    /* 时间轴结束的黑色圆形 */
+    .pretext-left::after {
+        width: 20px;
+        height: 20px;
+        right: -10px;
+    }
+    /* pre-time的两个同心圆 */
+    .pre-time::before {
+        border: 1px solid #000;
+        top: 55px;
+    }
+    .pre-time::after {
+        border: 1px solid #000;
+        top: 58px;
+    }
+    .pretime-right::before {
+        left: -8.6px;
+    }
+    .pretime-right::after {
+        left: -5.8px;
+    }
+    .pretime-left::before {
+        right: -8px;
+    }
+    .pretime-left::after {
+        right: -5px;
+    }
+    /*--------------------- 时间轴部分 end------------------------ */
+    /* 联系方式的样式预设 */
+    .contact {
+        height: 150px;
+        padding-left: 20%;
+        font-size: 8px;
+        line-height: 35px;
+    }
+    .contact-email {
+        padding-top: 5px;
+    }
+    .contact-icon::before {
+        height: 40px;
+        width: 40px;
+        margin-right: 20px;
+    }
+    /* email图标 */
+    .contact-email::before {
+        background: url(../img/aboutUs/icon_email.png) 2px 12px no-repeat;
+        margin-bottom: -10px;
+    }
+    /* add图标 */
+    .contact-add::before {
+        background: url(../img/aboutUs/icon_homepage.png) 3px 6px no-repeat;
+        margin-bottom: -10px;
+    }
+    /* num图标 */
+    .contact-num::before {
+        background: url(../img/aboutUs/icon_mobilephone.png) 9px 0px no-repeat;
+        margin-bottom: -16px;
+    }
+    /* 下面的巨幅文字 */
+    .main-bottom-text {
+        height: 100px;
+        line-height: 100px;
+        font-size: 25px;
+        font-weight: 700;
+    }
+}

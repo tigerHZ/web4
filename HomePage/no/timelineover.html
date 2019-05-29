@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+    <style>
+        .w1200 {
+            position: relative;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline {
+            padding-top: 100px;
+            margin-top: -130px;
+        }
+        
+        .timeline h5::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            left: 550px;
+            top: -35px;
+            z-index: -1;
+        }
+        
+        .timeline h5::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            left: 560px;
+            top: -25px;
+            background-color: #000;
+            z-index: -2;
+        }
+        /* 大的时间框里面的时间文字显示 */
+        
+        .timeline h5 {
+            position: relative;
+            top: 24px;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            z-index: 99;
+        }
+        
+        .timeline-item-left h6 {
+            margin: 0px 25px 25px 0px;
+        }
+        
+        .timeline-item-right h6 {
+            margin: 0px 25px 25px 25px;
+        }
+        
+        .timeline-item p {
+            max-width: 300px;
+            min-height: 100px;
+            margin: 25px;
+            margin-bottom: 0px;
+        }
+        
+        .timeline-item-left {
+            position: relative;
+            min-height: 150px;
+            text-align: right;
+            margin-right: 598px;
+            padding-top: 50px;
+            border-right: 2px solid black;
+        }
+        
+        .timeline-item-right {
+            position: relative;
+            min-height: 150px;
+            margin-left: 600px;
+            padding-top: 50px;
+            border-left: 2px solid black;
+        }
+        
+        .timeline-item-left p {
+            padding-left: 250px;
+        }
+        /* 时间轴结束的黑色圆形 */
+        
+        .timeline-end p::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            left: 580px;
+            bottom: 0px;
+            background-color: #000;
+        }
+        /* pre-time的两个同心圆 */
+        
+        .timeline-item h6::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            margin-left: -35px;
+            margin-top: 0px;
+        }
+        
+        .timeline-item h6::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            background-color: #000;
+            margin-left: -32px;
+            margin-top: 0px;
+            margin-top: -13px;
+        }
+        
+        .timeline-item-left h6::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            margin-left: 591px;
+            margin-top: 0px;
+        }
+        
+        .timeline-item-left h6::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            background-color: #000;
+            margin-left: 594px;
+            margin-top: 0px;
+            margin-top: -13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <div class="w1200">
+            <div class="timeline">
+                <h5>2018</h5>
+                <div class="timeline-item ">
+                    <!-- 可以在这个增加或者修改时间轴具体内容 -->
+                    <div class="timeline-item-right">
+                        <h6>2月6日</h6>
+                        <p>2月6日四川广宏德实业有限公司，于2018年2月6日在绵阳注册成立，我们专注于做建筑行业的领军者，将智能科技运用于建筑行业，给建筑打开一片新的天地。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <!-- 可以在这个增加或者修改时间轴具体内容 -->
+                    <div class="timeline-item-left">
+                        <h6>2月6日</h6>
+                        <p>2月6日四川广宏德实业有限公司，于2018年2月6日在绵阳注册成立，我们专注于做建筑行业的领军者，将智能科技运用于建筑行业，给建筑打开一片新的天地。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w1200">
+            <div class="timeline">
+                <h5>2017</h5>
+                <div class="timeline-item ">
+                    <div class="timeline-item-right">
+                        <h6>2月6日</h6>
+                        <p>2月6日四川广宏德实业有限公司，于2018年2月6日在绵阳注册成立，我们专注于做建筑行业的领军者，将智能科技运用于建筑行业，给建筑打开一片新的天地。</p>
+                    </div>
+                    <div class=" timeline-item-left timeline-end">
+                        <h6>2月6日</h6>
+                        <p> 2月6日四川广宏德实业有限公司，于2018年2月6日在绵阳注册成立，我们专注于做建筑行业的领军者，将智能科技运用于建筑行业，给建筑打开一片新的天地。</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

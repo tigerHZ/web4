@@ -1,0 +1,1727 @@
+/* --------------------------------------- index首页的common公共样式 -------------------------------------------- */
+
+body {
+    margin: 0;
+    padding: 0px;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h6 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.w1200 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.w1200-center {
+    left: -600px;
+}
+
+.full-screen {
+    width: 100%;
+}
+
+
+/* 目录及header */
+
+
+/* 头部的整体预设样式 */
+
+.header-item {
+    height: 100px;
+    border-bottom: 3px solid #000000;
+}
+
+
+/* logo */
+
+.logo {
+    margin-top: -40px;
+    text-align: center;
+    font-family: STFangsong;
+    font-weight: 500;
+    color: black;
+    font-size: 45px;
+}
+
+
+/* 当点击目录按钮时，固定网页，锁定焦点在目录按钮处 */
+
+.none-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
+
+/* 目录按钮 */
+
+.menu {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    width: 150px;
+    height: 55px;
+    background: #fff;
+    border-radius: 30px/30px;
+    box-shadow: 0 2px 3px -1px gray, 2px 0 3px -1px gray;
+    behavior: url(public/PIE.htc);
+}
+
+
+/* 弹出的选项栏的图标 */
+
+.pop-menu-icon {
+    background: url("../img/catalogue.png");
+    background-size: cover;
+    display: inline-block;
+    margin-left: 38px;
+    margin-top: 17px;
+    cursor: pointer;
+    width: 28px;
+    height: 21px;
+}
+
+
+/* 弹出的选项栏的文字 */
+
+.pop-text {
+    display: inline-block;
+    color: black;
+    width: 60px;
+    margin-left: 30px;
+    margin-top: -7px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+
+/* 点击目录按钮弹出的目录页样式 */
+
+.menu-dir {
+    position: fixed;
+    display: none;
+    padding: 0 10px;
+    background: #ffffff;
+    height: 100%;
+}
+
+
+/* 点击目录弹出的目录框样式预设 */
+
+.menu-dir ul {
+    text-align: center;
+    margin: 0;
+    padding-left: 0;
+    width: 340px;
+    font-size: 24px;
+}
+
+
+/* 弹出了目录框，原位置上出现的返回按钮 */
+
+.pop-item-exit {
+    display: block;
+    height: 100px;
+    width: 340px;
+    cursor: pointer;
+    border-bottom: 1px solid #000000;
+    padding-top: 35px;
+}
+
+
+/* 用i标签的形式，给返回按钮添加图片 */
+
+.pop-item-exit i {
+    background: url("../img/icon.png") 0 -80px;
+    width: 35px;
+    height: 35px;
+    display: block;
+    margin-left: 25px;
+}
+
+
+/* 目录里面每个link的样式预设 */
+
+.menu-dir li {
+    width: 340px;
+    padding-left: 25%;
+}
+
+
+/* 在点击目录按钮时，展示遮盖层的div的样式 */
+
+.pop-item-bg {
+    display: none;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    filter: Alpha(opacity=50);
+    /* 兼容ie8及以下 */
+}
+
+
+/* 目录里链接的样式 */
+
+.menu-dir a {
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 65px;
+    line-height: 65px;
+    border-bottom: 1px dashed #dddddd;
+}
+
+
+/* 用hover来展现鼠标在上面的样式 */
+
+.menu-dir a:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* 用i标签，实现icon */
+
+.menu-dir a i {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 25px;
+    width: 10px;
+    height: 17px;
+    background: url("../img/icon.png") 0 -38px;
+}
+
+
+/* 用hover控制icon的显示 */
+
+.menu-dir a:hover i {
+    display: block;
+}
+
+
+/* link的文字 */
+
+.menu-dir span {
+    height: 80px;
+    width: 340px;
+    color: black;
+}
+
+
+/* **************************** 轮播开始 ***************************** */
+
+.swiper {
+    position: relative
+}
+
+.swiper-container {
+    /*height: 800px;*/
+}
+
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* Fix of Webkit flickering */
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    position: relative;
+    /* width: 100%; */
+    -webkit-transition-property: -webkit-transform, left, top;
+    -webkit-transition-duration: 0s;
+    -webkit-transform: translate3d(0px, 0, 0);
+    -webkit-transition-timing-function: ease;
+    -moz-transition-property: -moz-transform, left, top;
+    -moz-transition-duration: 0s;
+    -moz-transform: translate3d(0px, 0, 0);
+    -moz-transition-timing-function: ease;
+    -o-transition-property: -o-transform, left, top;
+    -o-transition-duration: 0s;
+    -o-transform: translate3d(0px, 0, 0);
+    -o-transition-timing-function: ease;
+    -o-transform: translate(0px, 0px);
+    -ms-transition-property: -ms-transform, left, top;
+    -ms-transition-duration: 0s;
+    -ms-transform: translate3d(0px, 0, 0);
+    -ms-transition-timing-function: ease;
+    transition-property: transform, left, top;
+    transition-duration: 0s;
+    transform: translate3d(0px, 0, 0);
+    transition-timing-function: ease;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.swiper-free-mode>.swiper-wrapper {
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+
+/* IE10 Windows Phone 8 Fixes */
+
+.swiper-wp8-horizontal {
+    -ms-touch-action: pan-y;
+}
+
+.swiper-wp8-vertical {
+    -ms-touch-action: pan-x;
+}
+
+
+/* **************************** 轮播end ***************************** */
+
+
+/* **************************** footer及nav-link ***************************** */
+
+
+/* 在footer上面的nav样式预设 */
+
+.footer-nav {
+    width: 100%;
+    display: table;
+    border-top: 3px solid #000000;
+    /* min-height: 415px; */
+    padding-top: 140px;
+    margin-bottom: 100px;
+}
+
+.table-row {
+    display: table-row;
+}
+
+
+/* 在网页下方的链接划分栏的字体大小预设 */
+
+.partition {
+    list-style: none;
+    font-size: 14px;
+    margin-left: 15%;
+}
+
+
+/* 链接的分类分割线 */
+
+.separate-line {
+    background: url("../img/dash.png") no-repeat right center;
+    display: table-cell;
+    width: 30px;
+    /* text-align: left; */
+}
+
+.separate-line ul {
+    padding-inline-start: 10px;
+}
+
+
+/* 清除分割线 */
+
+.separate-line-none {
+    background: none;
+}
+
+
+/* 每个类列表链接的最上方的链接样式 */
+
+.partition-top {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.phone-time-box {
+    display: table-cell;
+    width: 30px;
+    text-align: center;
+    line-height: 80px;
+}
+
+
+/* 链接栏右边的联系电话 */
+
+.phone-number {
+    font-size: 46px;
+}
+
+
+/* 联系电话旁边的工作时间 */
+
+.work-time {
+    font-size: 26px;
+}
+
+
+/* 最后面的版权信息文字 */
+
+.footer-text {
+    min-height: 80px;
+    line-height: 80px;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+}
+
+
+/* ------------------- 响应式的设置 ----------------------- */
+
+
+/* 响应式的设置 */
+
+@media (min-width: 0px) {
+    .container {
+        max-width: 9999px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .header-item {
+        height: 60px;
+    }
+    .menu {
+        width: 45px;
+        height: 25px;
+    }
+    .pop-text {
+        display: none;
+    }
+    .icon-menu {
+        margin-left: 20px;
+        margin-top: 10px;
+        height: 10px;
+        width: 10px;
+    }
+    .pop-menu-icon {
+        margin-left: 9px;
+        margin-top: 2px;
+        cursor: pointer;
+        width: 25px;
+        height: 21px;
+    }
+    .partition {
+        font-size: 10px;
+    }
+    .partition-block {
+        height: 700px;
+        margin-top: 0;
+    }
+    .separate-line {
+        background: none;
+        border-bottom: 1px solid #dddddd;
+    }
+    .partition-top {
+        font-weight: 500;
+        font-size: 18px;
+        padding-bottom: 0px;
+    }
+    .phone-number {
+        font-size: 30px;
+    }
+    .work-time {
+        font-size: 15px;
+    }
+    .footer-text {
+        height: 30px;
+        line-height: 40px;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .footer-nav {
+        padding-top: 15px;
+    }
+    .separate-line ul {
+        margin-left: 0;
+    }
+}
+
+
+/*common end*/
+
+
+/* -----------------------------------------------------------------------  关于我们 -------------------------------------------------------------------------------------- */
+
+
+/*banner100%样式*/
+
+.aboutus-mainbanner {
+    width: 100%;
+}
+
+
+/*--------------------- whoweare ------------------------ */
+
+
+/*who we are三个单词图片  */
+
+.whoweare {
+    float: left;
+    width: 400px;
+    height: 200px;
+    margin-left: calc(50% - 450px);
+}
+
+
+/* whoweare右边的文字 */
+
+.whoweare-text {
+    float: right;
+    width: 380px;
+    line-height: 33px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: calc(50% - 450px);
+}
+
+
+/*--------------------- whoweare end------------------------ */
+
+
+/*--------------------- 拼接图 ------------------------ */
+
+.splice1 {
+    width: 20.83333333333333%;
+    float: left;
+    margin-bottom: 50px;
+}
+
+.splice2 {
+    width: 37.5%;
+    float: left;
+}
+
+.splice1 img {
+    width: 100%;
+}
+
+.splice2 img {
+    width: 100%;
+}
+
+
+/* 设置固定的宽，放置两张图片的时候实现竖排展示 */
+
+.img-display-block {
+    display: block;
+}
+
+.whoweare-position {
+    width: 1200px;
+    margin: 90px auto;
+}
+
+
+/*--------------------- 拼接图 end------------------------ */
+
+
+/* ------------------------ 时间轴 ------------------------------ */
+
+
+/*时间轴的上下边距预设*/
+
+.timeline {
+    margin-top: 150px;
+}
+
+
+/*这是年份两个大的圆 */
+
+.timeline h5:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    left: 550px;
+    top: -35px;
+    z-index: -1;
+    behavior: url(public/PIE.htc);
+}
+
+.timeline h5:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    left: 560px;
+    top: -25px;
+    background-color: #000;
+    z-index: -2;
+    behavior: url(public/PIE.htc);
+}
+
+
+/* 大的时间框里面的时间文字显示 */
+
+.timeline h5 {
+    position: relative;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 35px;
+    z-index: 2;
+}
+
+
+/* 小的时间框里面的时间文字显示 */
+
+.timeline-item-left h6 {
+    font-size: 16px;
+    margin: 0px 25px 25px 0px;
+}
+
+.timeline-item-right h6 {
+    font-size: 16px;
+    margin: 0px 25px 25px 25px;
+}
+
+
+/*详情介绍的文字显示*/
+
+.timeline-item p {
+    max-width: 300px;
+    margin-left: 25px;
+    padding-bottom: 25px;
+}
+
+
+/*----------------------- 切换左右展示的css -----------------------------*/
+
+.timeline-item-left {
+    position: relative;
+    text-align: right;
+    margin-right: 598px;
+    padding-top: 65px;
+    border-right: 2px solid black;
+}
+
+.timeline-item-right {
+    position: relative;
+    padding-top: 65px;
+    margin-left: 600px;
+    border-left: 2px solid black;
+}
+
+.timeline-item-left p {
+    margin-left: 275px;
+}
+
+
+/* 时间轴结束的黑色圆形 */
+
+.timeline-end {
+    padding-bottom: 80px;
+}
+
+.timeline-end p:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    left: 584px;
+    bottom: 0px;
+    background-color: #000;
+    behavior: url(public/PIE.htc);
+}
+
+
+/* pre-time的两个同心圆 */
+
+.timeline-item h6:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-left: -34px;
+    behavior: url(public/PIE.htc);
+}
+
+.timeline-item h6:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #000;
+    margin-left: -31px;
+    margin-top: -16px;
+    behavior: url(public/PIE.htc);
+}
+
+.timeline-item-left h6:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-left: 593px;
+    behavior: url(public/PIE.htc);
+}
+
+.timeline-item-left h6:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #000;
+    margin-left: 596px;
+    margin-top: -16px;
+    behavior: url(public/PIE.htc);
+}
+
+
+/*--------------------- 时间轴 end------------------------ */
+
+
+/*--------------------- 联系方式 ------------------------ */
+
+
+/* 联系方式的样式预设 */
+
+.contact {
+    height: 400px;
+    padding-left: 30%;
+    margin-top: 50px;
+    background-color: #dcdcdc;
+    font-size: 18px;
+    line-height: 70px;
+}
+
+.contact-email {
+    padding-top: 110px;
+}
+
+
+/* email图标 */
+
+.contact-icon:before {
+    content: '';
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-right: 40px;
+}
+
+.contact-email:before {
+    background: url(../img/aboutus/icon_email.png) 2px 12px no-repeat;
+    margin-bottom: -18px;
+}
+
+
+/* add图标 */
+
+.contact-add:before {
+    background: url(../img/aboutus/icon_homepage.png) 2px 12px no-repeat;
+    margin-bottom: -12px;
+}
+
+
+/* num图标 */
+
+.contact-num:before {
+    background: url(../img/aboutus/icon_mobilephone.png) 4px 12px no-repeat;
+    margin-bottom: -12px;
+}
+
+
+/*--------------------- 联系方式 end------------------------ */
+
+
+/* 下面的巨幅文字 */
+
+.main-bottom-text {
+    height: 450px;
+    text-align: center;
+    line-height: 450px;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+
+/*--------------------- 下面是响应式css的设置 ------------------------ */
+
+@media screen and (max-width:800px) {
+    /* whoweare */
+    .float-centerbox {
+        position: relative;
+        width: 100px;
+        left: 50%;
+    }
+    .whoweare {
+        float: left;
+        position: relative;
+        width: 200px;
+        height: 95px;
+        left: -100px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    /* whoweare右边的文字 */
+    .whoweare-text {
+        float: left;
+        position: relative;
+        width: 300px;
+        height: 100px;
+        font-size: 12px;
+        font-weight: 500;
+        left: -150px;
+        margin: 20px 0px 60px 0px;
+    }
+    .whoweare-position {
+        width: 320px;
+        margin: 50px auto;
+    }
+    /* ------------------------ 时间轴 ------------------------------ */
+    .w1200 {
+        width: 375px;
+        margin: 0 auto;
+    }
+    /*时间轴的上下边距预设*/
+    .timeline {
+        margin-top: 35px;
+    }
+    /*这是年份两个大的圆 */
+    .timeline h5:before {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000;
+        left: calc(50% - 25px);
+        top: -16px;
+    }
+    .timeline h5:after {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #000;
+        left: calc(50% - 20px);
+        top: -11px;
+    }
+    /* 大的时间框里面的时间文字显示 */
+    .timeline h5 {
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    /* 小的时间框里面的时间文字显示 */
+    .timeline-item-left h6 {
+        font-size: 12px;
+        margin: 0px 15px 15px 0px;
+    }
+    .timeline-item-right h6 {
+        font-size: 12px;
+        margin: 0px 15px 15px 15px;
+    }
+    /*详情介绍的文字显示*/
+    .timeline-item p {
+        max-width: 175.5px;
+        min-height: 80px;
+        margin: 15px 15px 0px 15px;
+    }
+    /*----------------------- 切换左右展示的css -----------------------------*/
+    .timeline-item-left {
+        min-height: 150px;
+        text-align: right;
+        margin-right: calc(50% - 1px);
+        padding-top: 45px;
+    }
+    .timeline-item-right {
+        min-height: 150px;
+        padding-top: 45px;
+        padding-bottom: 25px;
+        margin-left: calc(50% - 1px);
+    }
+    .timeline-item-left p {
+        margin-left: 15px;
+    }
+    /* 时间轴结束的黑色圆形 */
+    .timeline-end {
+        padding-bottom: 50px;
+    }
+    .timeline-end p:after {
+        width: 15px;
+        height: 15px;
+        left: calc(100% - 7px);
+    }
+    /* pre-time的两个同心圆 */
+    .timeline-item h6:before {
+        width: 16px;
+        height: 16px;
+        border: 1px solid #000;
+        margin-left: -24px;
+    }
+    .timeline-item h6:after {
+        width: 10px;
+        height: 10px;
+        border: 1px solid #000;
+        margin-left: -21px;
+        margin-top: -11px;
+    }
+    .timeline-item-left h6:before {
+        width: 16px;
+        height: 16px;
+        border: 1px solid #000;
+        margin-left: calc(100% - 7px);
+    }
+    .timeline-item-left h6:after {
+        width: 10px;
+        height: 10px;
+        border: 1px solid #000;
+        margin-left: calc(100% - 4px);
+        margin-top: -11px;
+    }
+    /*--------------------- 时间轴 end------------------------ */
+    /* 联系方式的样式预设 */
+    .contact {
+        height: 150px;
+        padding-left: 20%;
+        font-size: 8px;
+        line-height: 35px;
+    }
+    .contact-email {
+        padding-top: 5px;
+    }
+    .contact-icon:before {
+        height: 40px;
+        width: 40px;
+        margin-right: 20px;
+    }
+    /* email图标 */
+    .contact-email:before {
+        background: url(../img/aboutus/icon_email.png) 2px 12px no-repeat;
+        margin-bottom: -10px;
+    }
+    /* add图标 */
+    .contact-add:before {
+        background: url(../img/aboutus/icon_homepage.png) 3px 6px no-repeat;
+        margin-bottom: -10px;
+    }
+    /* num图标 */
+    .contact-num:before {
+        background: url(../img/aboutus/icon_mobilephone.png) 9px 0px no-repeat;
+        margin-bottom: -16px;
+    }
+    /* 下面的巨幅文字 */
+    .main-bottom-text {
+        height: 100px;
+        line-height: 100px;
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
+
+
+/* -----------------------------------------------------  人才招聘 ------------------------------------------------------------ */
+
+
+/*--------------------- job块 ------------------------ */
+
+.job {
+    /* display: flex; */
+    left: 0px;
+    right: 0px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+/* 职位列表 */
+
+.job ul {
+    text-align: center;
+    line-height: 70px;
+    font-size: 24px;
+    margin-top: 50px;
+    margin-right: 85px;
+    min-width: 260px;
+}
+
+
+/* 职位列表的具体职位下的分隔横线 */
+
+.job li {
+    width: 260px;
+    display: block;
+    border-bottom: 1px solid #dee2e6;
+    cursor: pointer;
+}
+
+.item-boder-bottom-none {
+    color: black;
+}
+
+
+/* 消除职位列表的文字的聚焦下横线 */
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/* 当聚焦于具体职位的时候的样式 */
+
+.list-item-focus {
+    color: #000000;
+}
+
+
+/* 不聚焦这个职位的时候的样式 */
+
+.list-item {
+    color: #868e96;
+}
+
+
+/* 职位 */
+
+.job-item {
+    float: left;
+    background-color: #f8f9fa;
+    margin-top: 50px;
+    width: 900px;
+    font-size: 18px;
+    margin-bottom: 80px;
+}
+
+
+/* 职位名称 */
+
+.job-name {
+    font-size: 36px;
+    margin-top: 55px;
+    margin-bottom: 60px;
+}
+
+
+/* 实现职位详情里面的职位名称之前的icon */
+
+.job-name:before {
+    content: "";
+    border-left: 10px solid black;
+    margin-right: 30px;
+    margin-left: 50px;
+}
+
+
+/* 职位需求方向详情 */
+
+.job-item h3 {
+    font-size: 24px;
+    margin-left: 25px;
+}
+
+.job-item p {
+    margin-left: 43px;
+    margin-bottom: 33px;
+}
+
+
+/*------------------------- 全屏显示大图的样式--------------------------*/
+
+
+/*盖板样式*/
+
+.opacityBottom {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 4;
+    top: 0;
+    left: 0
+}
+
+
+/*大图样式*/
+
+.bigImg {
+    width: 80%;
+    left: 10%;
+    top: 10%;
+    position: fixed;
+    z-index: 5;
+}
+
+
+/* ---------------------------- 响应式的设置 ----------------------------- */
+
+@media screen and (max-width:800px) {
+    p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+    /*--------------------- job块 ------------------------ */
+    .job {
+        width: 99%;
+    }
+    /* 职位列表 */
+    .job ul {
+        min-width: 150px;
+        line-height: 40px;
+        font-size: 15px;
+        margin-top: 20px;
+        margin-right: 5px;
+    }
+    /* 职位 */
+    .job-item {
+        margin-top: 25px;
+        font-size: 10px;
+        margin-bottom: 20px;
+        margin-right: 5px;
+    }
+    /* 职位名称 */
+    .job-name {
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .job-item h3 {
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    /* 实现职位详情里面的职位名称之前的icon */
+    .job-name:before {
+        content: "";
+        border-left: 5px solid black;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    /* 职位详情 */
+    .job-detail {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 24px;
+    }
+    .job-item p {
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+
+/* -----------------------------------------------------------------------  住宅 -------------------------------------------------------------------------------------- */
+
+
+/* 三个块的block公共样式 */
+
+.house-block {
+    /* display: flex;
+    flex-flow: column;
+    position: relative;
+    justify-content: center;
+    align-items: center; */
+    margin: 100px auto;
+    width: 1200px;
+    height: 400px;
+    text-align: center;
+}
+
+
+/* 三个block的分别样式 */
+
+.house-block h1 {
+    margin-bottom: 0;
+}
+
+.block1 {
+    background: url(../img/house/background1.jpg) no-repeat;
+    background: url(../img/house/eaves.png)top right no-repeat /40% 100%, url(../img/house/background1.jpg) no-repeat;
+    /* filter: progid: DXImageTransform.Microsoft.AlphaImageLoader( src='../img/business.png', sizingMethod='scale');
+    -ms-filter: progid: DXImageTransform.Microsoft.AlphaImageLoader( src='../img/business/background1.jpg', sizingMethod='scale'); */
+}
+
+.block2 {
+    background: url(../img/house/background2.jpg) no-repeat;
+    background: url(../img/house/eaves.png)top right no-repeat /40% 100%, url(../img/house/background2.jpg) no-repeat;
+}
+
+.block3 {
+    background: url(../img/house/background3.jpg) no-repeat;
+    background: url(../img/house/eaves.png)top right no-repeat /40% 100%, url(../img/house/background3.jpg) no-repeat;
+}
+
+
+/* block里面的文字预设样式*/
+
+.text {
+    position: relative;
+    top: 20%;
+    width: 800px;
+    margin: 0 auto;
+    border: 3px dashed black;
+}
+
+
+/* block里面的三行文字 */
+
+.house-name {
+    font-size: 75px;
+    margin-top: 25px;
+}
+
+.house-aim {
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+.house-detail {
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+
+/* h3-text的定位 */
+
+.bottom-detail {
+    position: relative;
+    bottom: -90px;
+    padding: 0 2%;
+}
+
+
+/*响应式设置*/
+
+@media screen and (max-width:800px) {
+    .house-block {
+        margin: 25px auto;
+        height: 130px;
+        width: 95%;
+    }
+    .text {
+        height: 55px;
+        width: 170px;
+        border: 2px dashed black;
+        margin-top: -25px;
+    }
+    /* block里面的三行文字 */
+    .house-name {
+        font-size: 20px;
+        margin-top: 2px;
+    }
+    .house-aim {
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+    .house-detail {
+        font-size: 12px;
+    }
+    /* h3-text的定位 */
+    .bottom-detail {
+        position: absolute;
+        margin-bottom: -4px;
+    }
+    p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+}
+
+
+/*----------------------------------------------- 商业(酒店共用) ------------------------------------------------*/
+
+
+/* 三个块的block公共样式 */
+
+.business-block {
+    position: relative;
+    margin: 100px auto;
+    width: 1400px;
+    height: 400px;
+    text-align: center;
+}
+
+
+/* 三个block的分别样式 */
+
+.block-1 {
+    background: url(../img/business/background1.jpg) no-repeat;
+}
+
+.block-2 {
+    background: url(../img/business/background2.jpg) no-repeat;
+}
+
+.block-3 {
+    background: url(../img/business/background3.jpg) no-repeat;
+}
+
+
+/* block里面的文字预设样式*/
+
+.business-text {
+    float: right;
+    height: 400px;
+    width: 586px;
+    color: #fff;
+}
+
+.block-1 .business-text {
+    background-color: #005c92;
+}
+
+.block-2 .business-text {
+    background-color: #5e7501;
+}
+
+.block-3 .business-text {
+    background-color: #9e003c;
+}
+
+.business-block h1 {
+    font-size: 55px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.business-block p {
+    font-size: 16px;
+}
+
+.business-block h3 {
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+
+/*响应式设置*/
+
+@media screen and (max-width:800px) {
+    .business-block {
+        margin: 10px auto;
+        width: 95%;
+        height: 208px;
+    }
+    .block-1 {
+        background-size: 100%;
+    }
+    .block-2 {
+        background-size: 100%;
+    }
+    .block-3 {
+        background-size: 100%;
+    }
+    .business-text {
+        height: 100%;
+        width: 42%;
+    }
+    .business-block h1 {
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .business-block p {
+        font-size: 8px;
+    }
+    .business-block h3 {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+}
+
+
+/*------------------------------------------ 住宅详情 --------------------------------------------*/
+
+.housedetail-block {
+    position: relative;
+    height: 440px;
+    background: #fff;
+    box-shadow: 0 1px 0px 1px #c3c2c2, 1px 0 0px 0px #c3c2c2;
+    margin-bottom: 50px;
+    padding: 55px 0px 55px 55px;
+}
+
+.housedetail-block a {
+    color: #000;
+}
+
+.housedetail-block h1 {
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.item-list li {
+    float: left;
+    height: 20px;
+    margin-top: 30px;
+    width: 572px;
+    font-size: 16px;
+}
+
+.housedetail-block-start {
+    margin-top: 70px;
+}
+
+.seemore span {
+    display: block;
+    height: 25px;
+    margin-right: 55px;
+}
+
+.more-down {
+    background: url(../img/more_down.jpg) no-repeat center;
+}
+
+.more-up {
+    background: url(../img/more_up.jpg) no-repeat center;
+    padding-bottom: 50px;
+}
+
+
+/*------------------------ 概要块 ----------------------*/
+
+.housedetail-feature {
+    margin-top: 15px;
+}
+
+.housedetail-feature li {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    width: 60px;
+    font-size: 14px;
+    text-align: center;
+    margin-right: 20px;
+    border-radius: 4px;
+    /*这句就是重点，让边框变为圆角*/
+    border: 1px solid #fff;
+    /*让边框变为1px宽度，直线，#CCC颜色*/
+    behavior: url(public/PIE.htc);
+}
+
+.bgc1 {
+    background-color: #e8caa1;
+}
+
+.bgc2 {
+    background-color: #b4dab4;
+}
+
+.bgc3 {
+    background-color: #d2bae6;
+}
+
+.bgc4 {
+    background-color: #b4dab4;
+}
+
+.bgc5 {
+    background-color: #b7c4e8;
+}
+
+.bgc6 {
+    background-color: #e8caa1;
+}
+
+#price {
+    margin-top: 10px;
+}
+
+.housedetail-summary em {
+    font-style: normal;
+    color: #FF6600;
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+.housedetail-summary mark {
+    background-color: #fff;
+    color: #FF6600;
+    font-size: 15px;
+}
+
+#phonenum {
+    margin-top: 17px;
+    margin-bottom: 25px;
+}
+
+.housedetail-summary strong {
+    font-weight: 500;
+    color: #FF6600;
+    font-size: 25px;
+}
+
+.housedetail-summary strong mark {
+    font-size: 15px;
+}
+
+
+/*------------------------ 户型块 ----------------------*/
+
+.housedetail-type {
+    padding-bottom: 0px;
+}
+
+.housedetail-type h1 {
+    margin-bottom: 45px;
+}
+
+.housedetail-type img {
+    margin-right: 55px;
+    margin-bottom: 20px;
+}
+
+.picture-display li {
+    float: left;
+    margin-bottom: 15px;
+}
+
+.picture-display p {
+    text-align: center;
+    margin-right: 55px;
+    font-size: 18px;
+}
+
+.housedetail-type span {
+    cursor: pointer;
+}
+
+
+/*------------------------ 相册块 ----------------------*/
+
+.housedetail-picture {
+    padding-bottom: 0px;
+}
+
+.housedetail-picture h1 {
+    float: left;
+    margin-bottom: 45px;
+    margin-top: -20px;
+}
+
+.housedetail-picture img {
+    margin-right: 55px;
+    margin-top: 25px;
+}
+
+.picture-display {
+    overflow: hidden;
+    height: 260px;
+}
+
+.housedetail-picture .seemore {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+/*------------------------ 详情块 ----------------------*/
+
+
+/*------------------------ 配套块 ----------------------*/
+
+.housedetail-match h1 {
+    float: left;
+    margin-bottom: 0px;
+    margin-top: -20px;
+}
+
+.aim-choose {
+    margin-right: 50px;
+}
+
+.aim-choose li {
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.match-item {
+    margin-top: 40px;
+}
+
+.match-item li {
+    width: 201px;
+    margin: 40px 70px auto 15px;
+}
+
+.match-item h5 {
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+.match-item p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+/*----------------------------------- 酒店详情 ------------------------------------------*/
+
+.detail-color {
+    background-color: #f7f7f7;
+}
+
+.hotel-block {
+    position: relative;
+    background: white;
+    height: 400px;
+    box-shadow: 0 1px 0px 1px #c3c2c2, 1px 0 0px 0px #c3c2c2;
+    margin-bottom: 50px;
+    padding: 55px 55px 55px 55px;
+}
+
+.hotel-block a {
+    color: #000;
+}
+
+.hotel-block h1 {
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.hotel-picture {
+    height: 670px;
+    padding-right: 0px;
+}
+
+.block-start {
+    margin-top: 70px;
+}
+
+.hotel-picture .seemore span {
+    margin-top: 30px;
+    display: block;
+    height: 25px;
+    margin-right: 55px;
+    margin-bottom: -25px;
+    padding-bottom: 0px;
+}
+
+.sumup-word {
+    font-size: 16px;
+}
+
+.hotel-picture-display {
+    overflow: hidden;
+    height: 474px;
+}
+
+.hotel-picture li {
+    float: left;
+    margin-right: 41px;
+    margin-top: 25px;
+}
+
+.hotel-picture .seemore {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+
+/*这里是contact部分*/
+
+.contact-block {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.contact-block div {
+    position: relative;
+    z-index: 2;
+    height: 100px;
+    width: 900px;
+    line-height: 100px;
+    box-shadow: 0 1px 3px 2px #c3c2c2, 1px 0 1px 1px #c3c2c2;
+    border-radius: 50px;
+    margin: 0 auto;
+    behavior: url(public/PIE.htc);
+}
+
+.contact-phone {
+    float: left;
+    font-size: 30px;
+}
+
+.contact-phone:before {
+    content: "";
+    display: block;
+    float: left;
+    width: 30px;
+    height: 35px;
+    margin: 34px 20px 0px 50px;
+    background: url(../img/phone.jpg) no-repeat;
+}
+
+.contact-block .contact-add {
+    font-size: 15px;
+    float: right;
+}
+
+.contact-block .contact-add:before {
+    content: "";
+    display: block;
+    float: right;
+    height: 40px;
+    width: 30px;
+    margin: 31px 44px 0px 20px;
+    background: url(../img/add.jpg) no-repeat;
+}
+
+
+/*--------------------------------- 商业详情 --------------------------------------*/
+
+.brand-list li {
+    float: left;
+    margin: 4px 10px 4px 4px;
+}

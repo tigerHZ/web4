@@ -1,0 +1,302 @@
+/*--------------------- 时间轴 ------------------------ */
+
+.timeline {
+    position: relative;
+    width: 50%;
+    min-height: 400px;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+}
+
+.timeline-right {
+    float: right;
+    border-left: 2px solid black;
+}
+
+.timeline-left {
+    float: left;
+    text-align: right;
+    margin-bottom: 50px;
+    border-right: 2px solid black;
+}
+
+
+/* 时间轴的文字 */
+
+.timeline p {
+    font-size: 16px;
+    max-width: 500px;
+}
+
+.timeline-right p {
+    margin-left: 20px;
+}
+
+.timeline-left p {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 66px;
+}
+
+
+/* 时间轴的小的时间 */
+
+.timeline-item h6 {
+    font-size: 16px;
+    margin: 166px auto 50px auto;
+}
+
+.timeline-item-right h6 {
+    margin-left: 25px;
+}
+
+.timeline-item-left h6 {
+    margin-right: 25px;
+}
+
+
+/* 使用伪类实现大的时间框 */
+
+.timeline h5::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    left: -25px;
+    top: -35px;
+    z-index: -1;
+}
+
+.timeline h5::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    left: -15px;
+    top: -25px;
+    background-color: #000;
+    z-index: -2;
+}
+
+
+/* 大的时间框里面的时间文字显示 */
+
+.timeline h5 {
+    position: relative;
+    top: 24px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    z-index: 99;
+}
+
+.timeline-right h5 {
+    float: left;
+    left: -24px;
+}
+
+.timeline-left h5 {
+    float: right;
+    right: -24px;
+}
+
+
+/* 时间轴结束的黑色圆形 */
+
+.timeline-left p::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    right: -17.5px;
+    bottom: 0px;
+    background-color: #000;
+}
+
+
+/* pre-time的两个同心圆 */
+
+.timeline-item h6::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    top: 171px;
+}
+
+.timeline-item h6::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    top: 174px;
+    background-color: #000;
+}
+
+.timeline-item-right h6::before {
+    left: -8.6px;
+}
+
+.timeline-item-right h6::after {
+    left: -5.8px;
+}
+
+.timeline-item-left h6::before {
+    right: -8px;
+}
+
+.timeline-item-left h6::after {
+    right: -5px;
+}
+
+
+/*
+
+
+
+*/
+
+
+/*--------------------- 时间轴部分 ------------------------ */
+
+.timeline {
+    min-height: 220px;
+}
+
+.timeline-right {
+    border-left: 1px solid black;
+}
+
+.timeline-left {
+    border-right: 1px solid black;
+}
+
+
+/* 时间轴的文字 */
+
+.timeline p {
+    font-size: 13px;
+}
+
+.timeline-right p {
+    margin-left: 5px;
+}
+
+.timeline-left p {
+    margin-right: 5px;
+    margin-bottom: 30px;
+}
+
+
+/* 时间轴的小的时间 */
+
+.timeline h6 {
+    font-size: 16px;
+    margin: 50px auto 25px auto;
+}
+
+.timeline-right h6 {
+    margin-left: 15px;
+}
+
+.timeline-left h6 {
+    margin-right: 15px;
+}
+
+
+/* 使用伪类实现大的时间框 */
+
+.timeline h5::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    left: -8px;
+    top: -16px;
+    z-index: -1;
+}
+
+.timeline h5::after {
+    width: 40px;
+    height: 40px;
+    left: -3px;
+    top: -11px;
+    z-index: -2;
+}
+
+
+/* 大的时间框里面的时间文字显示 */
+
+.timeline h5 {
+    position: relative;
+    top: 0px;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    z-index: 99;
+}
+
+.timeline-right h5 {
+    float: left;
+    left: -17px;
+}
+
+.timeline-left h5 {
+    float: right;
+    right: -15px;
+}
+
+
+/* 时间轴结束的黑色圆形 */
+
+.timeline-left p::after {
+    width: 20px;
+    height: 20px;
+    right: -10px;
+}
+
+
+/* pre-time的两个同心圆 */
+
+.timeline h6::before {
+    border: 1px solid #000;
+    top: 55px;
+}
+
+.timeline h6::after {
+    border: 1px solid #000;
+    top: 58px;
+}
+
+.timeline-right h6::before {
+    left: -8.6px;
+}
+
+.timeline-right h6::after {
+    left: -5.8px;
+}
+
+.pretime-left::before {
+    right: -8px;
+}
+
+.pretime-left::after {
+    right: -5px;
+}
+
+
+/*--------------------- 时间轴部分 end------------------------ */
